@@ -1,0 +1,25 @@
+<!-- <div [class]="'circle'"></div>
+<div [class.circle]="!isHighlight" [class.square]="isHighlight"></div>
+<div [ngClass]="currentClass"></div>
+
+<p>app-form works!</p>
+<input [(ngModel)]="name" />
+<h3 [ngStyle]="name.length % 2 === 0 ? evenStyle : oddStyle">YOUR NAME: {{ name }}</h3>
+<button (click)="handleClick()">Lưu Lại</button>
+ -->
+ <button (click)="updateUser()">Update</button>
+ 
+ <br/>
+ <br/>
+  
+ <app-child [userName]="userName"></app-child>
+ <br/>
+ <br/>
+
+ <ul *ngIf="isNgIf">
+    <li *ngFor="let subject of arrSubjects">
+        <p>{{ 'subject: ' + subject }}</p>
+    </li>
+ </ul>
+
+ <button (click)="handleShowSubject()">{{!isNgIf ? 'Show Subject' : 'Hide Subject'}}</button>

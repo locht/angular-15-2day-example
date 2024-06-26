@@ -1,0 +1,7 @@
+<p>weather works!</p>
+
+<p>{{ isLoading ? 'Loading...' : isError ? 'Không tìm thấy' : cityName + ' đang là ' + temp + ' độ C' }}</p>
+<br><br>
+<input [(ngModel)]="inputName" placeholder="Nhập tên thành phố"/>
+<br><br>
+<button (click)="getWeather()">Lấy nhiệt độ</button>

@@ -1,0 +1,9 @@
+<p>contact works!</p>
+
+<div *ngFor="let contact of arrayContacts">
+    <p>Tên: {{ contact.name }} SDT: {{ contact.phoneNumber }} </p>
+</div>
+
+<div *ngFor="let contact of arrayContacts">
+    <a routerLink="/detail/{{ contact.id }}/{{ contact.name }}/{{ contact.phoneNumber }}"> {{ contact.name }}</a>
+</div>

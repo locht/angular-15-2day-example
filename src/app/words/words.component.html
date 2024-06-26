@@ -1,0 +1,38 @@
+<p>words works!</p>
+
+<div *ngIf="isShowInput">
+    <input placeholder="English" [(ngModel)]="newEn">
+    <br>
+    <input placeholder="Vietnamese" [(ngModel)]="newVn">
+    <br><br>
+</div>
+
+<button (click)="handleAddWord()">
+Thêm từ mới
+</button>
+
+<br><br>
+
+<select [(ngModel)]="valueFilter">
+    <option *ngFor="let filter of arrayFilters" >
+       {{ filter.value }}
+    </option>
+</select>
+
+<br><br>
+<div *ngFor="let word of arrWords">
+    <div *ngIf="showListFilter(word.memorized)">
+        <h3 [ngStyle]="{ color: word.memorized? 'green': 'red'}">{{ word.en }}</h3>
+        <p>{{ word.vn }}</p>
+
+        <button (click)="handleRemoveWord(word)">
+            Xóa
+        </button>
+
+        <button (click)="word.memorized = !word.memorized">
+             {{ !word.memorized ? 'đã thuộc' :  'chưa thuộc'}}
+        </button>
+    </div>
+</div>
+
+

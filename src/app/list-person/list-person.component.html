@@ -1,0 +1,7 @@
+<p>list-person works!</p>
+
+<ng-container *ngFor="let person of arrayPerson">
+    <app-person [name]="person.name" [age]="person.age" (clickDel)="clickDelPerson(person)"></app-person>
+</ng-container>
+
+
